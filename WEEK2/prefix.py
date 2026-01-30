@@ -1,24 +1,26 @@
 # find longest prefix 
 # inpt=['flower','flow','flight'] 
 # result=f1
-def decideWords():
-    words = ['flower', 'flow', 'flight']
-    return words
+def longestPrefix(words):
+    prefix = ""
 
-def findLongestPrefix(words):
-    prefix = words[0]
-    for word in words[1:]:
-        while not word.startswith(prefix):
-            prefix = prefix[:-1]
+    for i in range(len(words[0])):
+        ch = words[0][i]
+
+        for word in words:
+            if i >= len(word) or word[i] != ch:
+                return prefix
+
+        prefix = prefix + ch
+
     return prefix
 
-def displayLongestPrefix():
-    words = decideWords()
-    prefix = findLongestPrefix(words)
-    print("Longest prefix:", prefix)
 
 def main():
-    displayLongestPrefix()
+    words = ['flower', 'flow', 'flight']
+    result = longestPrefix(words)
+    print("Longest prefix:", result)
+
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,3 @@
+def countListElement(lst):
+    output ={}
+    
