@@ -15,7 +15,7 @@ books=[]
 print("How many books you want to enter?")
 n=int(input())
 
-for i in range (n):
+for i in range :
  print("Enter title,author,quantity and price of book",i+1)
  title=input()
  author=input()
